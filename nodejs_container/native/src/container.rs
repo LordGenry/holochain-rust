@@ -91,8 +91,9 @@ declare_types! {
                 let guard = cx.lock();
                 let hab = &mut *this.borrow_mut(&guard);
                 let cap = Some(CapabilityCall::new(
-                    Address::from(""), //FIXME
-                    None,
+                    Address::from("fake_token"), //FIXME
+                    Address::from("fake_sender"), //FIXME
+                    CallSignature {},
                 ));
                 let instance_arc = hab.container.instances().get(&instance_id)
                     .expect(&format!("No instance with id: {}", instance_id));
