@@ -193,8 +193,11 @@ mod tests {
     };
     use holochain_core_types::{
         agent::AgentId,
-        dna::{capabilities::{CallSignature, CapabilityCall}, Dna},
-        cas::content::Address
+        cas::content::Address,
+        dna::{
+            capabilities::{CallSignature, CapabilityCall},
+            Dna,
+        },
     };
     use holochain_wasm_utils::wasm_target_dir;
     use std::sync::{Arc, Mutex};
